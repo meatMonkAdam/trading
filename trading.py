@@ -42,9 +42,6 @@ def backtest(start, end, capital_base, func_name):
                    price = data.current(stock, 'price'))   
             
             
-    start = datetime(2014, 1, 1, 0, 0, 0, 0, pytz.utc)
-    end = datetime(2015, 1, 1, 0, 0, 0, 0, pytz.utc)
-    capital_base = 10000
     return run_algorithm(start, end, initialize,capital_base,handle_data,bundle = 'quandl')
 
 class algo():
